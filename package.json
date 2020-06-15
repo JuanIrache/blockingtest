@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "test",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron-webpack dev",
+    "build": "npm-run-all --sequential build:wbpk build:builder",
+    "build:wbpk": "electron-webpack",
+    "build:builder": "electron-builder"
+  },
+  "author": "Juan Irache Duesca",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.9.4",
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1",
+    "electron-webpack": "^2.8.2",
+    "npm-run-all": "^4.1.5",
+    "precss": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "template": "src/index.html",
+      "webpackConfig": "webpack.renderer.js"
+    }
+  }
+}

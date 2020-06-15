@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  position: absolute;
+}
+
+body {
+  margin: 0;
+}
